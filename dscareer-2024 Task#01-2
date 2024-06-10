@@ -1,0 +1,7 @@
+x = float(input()) 
+y = float(input()) 
+
+
+sum = x + y
+
+print(sum)
