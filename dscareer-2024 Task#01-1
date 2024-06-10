@@ -1,0 +1,6 @@
+s = input("What's your name?") # user input 'Python'
+
+s = "Hello " + s
+
+print(s) # Hello Python
+
