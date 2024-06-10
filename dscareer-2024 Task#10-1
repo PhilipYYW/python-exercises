@@ -1,0 +1,26 @@
+def is_prime(num):
+    """Check the integer is a prime or not"""
+    if num <= 1:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def primes(n):
+    """Find out every primes less than n"""
+    prime_list = []
+    for num in range(2, n):
+        if is_prime(num):
+            prime_list.append(num)
+    return prime_list
+
+while True:
+    try:
+        x = int(input("Please input an integer. n: "))
+        break
+    except Exception:       
+        print("Please input the non-negative integer greater than 0.")
+
+result = primes(x)
+print(", ".join(map(str, result)))
