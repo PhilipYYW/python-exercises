@@ -1,0 +1,28 @@
+def add1(L):
+  return [n + 1 for n in L]
+
+ 
+def isPrime(n):
+  if n <= 1:
+      return False
+  for num in range(2, int(n ** 0.5) + 1):
+      if n % num == 0:
+          return False
+  return True 
+
+def f(L, F):
+  if F == add1:
+      return add1(L)
+  elif F == isPrime:
+      return [isPrime(n) for n in L]
+
+
+  
+
+L = [1,2,3,4,5,6]
+F = add1
+print(f(L, F)) # [2,3,4,5,6,7]
+
+L = [2,3,4,5,6,7] 
+F = isPrime
+print(f(L, F)) # [True,True,False,True,False,True]
