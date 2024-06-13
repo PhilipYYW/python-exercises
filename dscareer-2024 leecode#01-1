@@ -1,0 +1,9 @@
+import re
+
+s = input() # e.g., This company is not poor at all.
+
+pattern = r'not .*? at all'
+
+d = re.sub(pattern, 'good', s)
+
+print(d) # This company is good.
