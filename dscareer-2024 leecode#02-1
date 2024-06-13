@@ -1,0 +1,32 @@
+a, b = input(), input() 
+
+a = int(a)
+b = int(b)
+the_list =list(range(a, b+1))
+
+temp_list = []
+
+for i in the_list:
+    is_self_dividing = True
+    for num in str(i):
+        if num == '0':
+            is_self_dividing = False
+            
+        elif i % int(num) != 0:
+            is_self_dividing = False
+
+    
+    if is_self_dividing:
+        temp_list.append(i)
+            
+print(temp_list)
+
+max_numbers = []
+max_gap = 0
+for n in range(len(temp_list)):       
+    gap = temp_list[n] - temp_list[n-1]
+    if gap > max_gap:
+        max_gap = gap
+        max_numbers = [temp_list[n-1], temp_list[n]]
+        
+print(max_numbers[0], max_numbers[1])
