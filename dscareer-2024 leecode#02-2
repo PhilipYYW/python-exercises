@@ -1,0 +1,22 @@
+from replit import clear
+num_list = list(map(int, input().split(',')))
+target = int(input())  
+
+
+num_dict = {}
+d_list = []
+
+
+for i in range(len(num_list)):
+  complement = target - num_list[i]  
+  if complement in num_dict:
+      print(num_dict[complement], i)  
+      clear()
+      break
+  num_dict[num_list[i]] = i
+ 
+
+d_list.append(num_dict[complement])
+d_list.append(i)
+print(d_list)
+
