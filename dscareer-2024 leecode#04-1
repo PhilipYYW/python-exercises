@@ -1,0 +1,7 @@
+from itertools import permutations
+
+s = input()  # AB
+perms = permutations(s)
+result_list = [''.join(p) for p in perms]
+
+print(result_list)  # ['AB', 'BA']
